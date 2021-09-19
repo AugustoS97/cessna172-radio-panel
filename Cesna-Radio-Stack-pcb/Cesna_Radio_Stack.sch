@@ -1,0 +1,1317 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "Módulo de Radio para ATMega"
+Date "2021-09-18"
+Rev "1.0"
+Comp "Augusto Samuel Hernández Martín"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x15_Odd_Even J1
+U 1 1 6147CB89
+P 12400 7500
+F 0 "J1" H 12450 8417 50  0000 C CNN
+F 1 "Conn_02x15_Odd_Even" H 12450 8326 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x15_P2.54mm_Vertical" H 12400 7500 50  0001 C CNN
+F 3 "~" H 12400 7500 50  0001 C CNN
+	1    12400 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW2
+U 1 1 61483F84
+P 6450 7525
+F 0 "SW2" H 6450 7892 50  0000 C CNN
+F 1 "NAV_ENC-EC11" H 6450 7801 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm" H 6300 7685 50  0001 C CNN
+F 3 "~" H 6450 7785 50  0001 C CNN
+	1    6450 7525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_DPDT SW1
+U 1 1 61487B23
+P 3000 7600
+F 0 "SW1" H 3000 8085 50  0000 C CNN
+F 1 "SW_COM-DPDT 8x8 mm" H 3000 7994 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx03_Slide_9.78x9.8mm_W7.62mm_P2.54mm" H 3000 7800 50  0001 C CNN
+F 3 "~" H 3000 7800 50  0001 C CNN
+	1    3000 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 7400 2800 7800
+Wire Wire Line
+	2800 7800 2675 7800
+Connection ~ 2800 7800
+Wire Wire Line
+	3200 7300 3350 7300
+Wire Wire Line
+	3350 7300 3350 7700
+Wire Wire Line
+	3350 7700 3200 7700
+Wire Wire Line
+	3350 7700 3475 7700
+Connection ~ 3350 7700
+Wire Wire Line
+	2675 7800 2675 7950
+$Comp
+L power:GND #PWR04
+U 1 1 6148AEB1
+P 2675 7950
+F 0 "#PWR04" H 2675 7700 50  0001 C CNN
+F 1 "GND" H 2680 7777 50  0000 C CNN
+F 2 "" H 2675 7950 50  0001 C CNN
+F 3 "" H 2675 7950 50  0001 C CNN
+	1    2675 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 6148BB2A
+P 3475 7800
+F 0 "C3" H 3567 7846 50  0000 L CNN
+F 1 "10nF" H 3567 7755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 3475 7800 50  0001 C CNN
+F 3 "~" H 3475 7800 50  0001 C CNN
+	1    3475 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 6148C647
+P 3475 7975
+F 0 "#PWR05" H 3475 7725 50  0001 C CNN
+F 1 "GND" H 3480 7802 50  0000 C CNN
+F 2 "" H 3475 7975 50  0001 C CNN
+F 3 "" H 3475 7975 50  0001 C CNN
+	1    3475 7975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3475 7975 3475 7900
+Wire Wire Line
+	3350 7300 3350 7200
+Connection ~ 3350 7300
+Text GLabel 3350 7200 1    50   Output ~ 0
+COM_SWAP
+$Comp
+L Device:R_Small R4
+U 1 1 61499B28
+P 6975 7625
+F 0 "R4" V 6875 7750 50  0000 C CNN
+F 1 "10k" V 6875 7625 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 6975 7625 50  0001 C CNN
+F 3 "~" H 6975 7625 50  0001 C CNN
+	1    6975 7625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 61499F11
+P 6825 7800
+F 0 "C6" H 6917 7846 50  0000 L CNN
+F 1 "10nF" H 6917 7755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6825 7800 50  0001 C CNN
+F 3 "~" H 6825 7800 50  0001 C CNN
+	1    6825 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6825 7700 6825 7625
+Wire Wire Line
+	6825 7625 6750 7625
+Wire Wire Line
+	6875 7625 6825 7625
+Connection ~ 6825 7625
+Wire Wire Line
+	7075 7625 7200 7625
+$Comp
+L power:GND #PWR010
+U 1 1 6149C711
+P 6825 7975
+F 0 "#PWR010" H 6825 7725 50  0001 C CNN
+F 1 "GND" H 6830 7802 50  0000 C CNN
+F 2 "" H 6825 7975 50  0001 C CNN
+F 3 "" H 6825 7975 50  0001 C CNN
+	1    6825 7975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6825 7975 6825 7900
+Wire Wire Line
+	6750 7425 6825 7425
+$Comp
+L power:GND #PWR09
+U 1 1 6149D8F2
+P 6825 7425
+F 0 "#PWR09" H 6825 7175 50  0001 C CNN
+F 1 "GND" V 6830 7297 50  0000 R CNN
+F 2 "" H 6825 7425 50  0001 C CNN
+F 3 "" H 6825 7425 50  0001 C CNN
+	1    6825 7425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 7525 5950 7525
+$Comp
+L power:GND #PWR06
+U 1 1 6149EF11
+P 5950 7525
+F 0 "#PWR06" H 5950 7275 50  0001 C CNN
+F 1 "GND" V 5955 7397 50  0000 R CNN
+F 2 "" H 5950 7525 50  0001 C CNN
+F 3 "" H 5950 7525 50  0001 C CNN
+	1    5950 7525
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 6149F577
+P 5900 7425
+F 0 "R2" V 5800 7300 50  0000 C CNN
+F 1 "10k" V 5795 7425 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 5900 7425 50  0001 C CNN
+F 3 "~" H 5900 7425 50  0001 C CNN
+	1    5900 7425
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 614A015B
+P 5900 7625
+F 0 "R3" V 6000 7375 50  0000 C CNN
+F 1 "10k" V 6000 7600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 5900 7625 50  0001 C CNN
+F 3 "~" H 5900 7625 50  0001 C CNN
+	1    5900 7625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 614A0A94
+P 6075 7225
+F 0 "C4" H 5900 7300 50  0000 L CNN
+F 1 "10nF" H 6150 7300 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6075 7225 50  0001 C CNN
+F 3 "~" H 6075 7225 50  0001 C CNN
+	1    6075 7225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 614A14E3
+P 6075 7800
+F 0 "C5" H 6175 7825 50  0000 L CNN
+F 1 "10nF" H 6175 7725 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6075 7800 50  0001 C CNN
+F 3 "~" H 6075 7800 50  0001 C CNN
+	1    6075 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 7625 6075 7625
+Wire Wire Line
+	6075 7700 6075 7625
+Connection ~ 6075 7625
+Wire Wire Line
+	6075 7625 6150 7625
+Wire Wire Line
+	5800 7625 5525 7625
+Wire Wire Line
+	6150 7425 6075 7425
+Wire Wire Line
+	6075 7425 6075 7325
+Wire Wire Line
+	6000 7425 6075 7425
+Connection ~ 6075 7425
+Wire Wire Line
+	5800 7425 5525 7425
+$Comp
+L power:GND #PWR08
+U 1 1 614A69A2
+P 6075 7950
+F 0 "#PWR08" H 6075 7700 50  0001 C CNN
+F 1 "GND" H 6080 7777 50  0000 C CNN
+F 2 "" H 6075 7950 50  0001 C CNN
+F 3 "" H 6075 7950 50  0001 C CNN
+	1    6075 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 614A703D
+P 6075 7050
+F 0 "#PWR07" H 6075 6800 50  0001 C CNN
+F 1 "GND" H 6080 6877 50  0000 C CNN
+F 2 "" H 6075 7050 50  0001 C CNN
+F 3 "" H 6075 7050 50  0001 C CNN
+	1    6075 7050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6075 7125 6075 7050
+Wire Wire Line
+	6075 7900 6075 7950
+Text GLabel 7200 7625 2    50   Output ~ 0
+SW_COM_ENC_KHZ
+Text GLabel 5525 7625 0    50   Output ~ 0
+B_COM_ENC_KHZ
+Text GLabel 5525 7425 0    50   Output ~ 0
+A_COM_ENC_KHZ
+$Comp
+L Device:Rotary_Encoder_Switch SW3
+U 1 1 614AEC77
+P 9750 7525
+F 0 "SW3" H 9750 7892 50  0000 C CNN
+F 1 "COM_ENC-EC11" H 9750 7801 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm" H 9600 7685 50  0001 C CNN
+F 3 "~" H 9750 7785 50  0001 C CNN
+	1    9750 7525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 614AEC7D
+P 10275 7625
+F 0 "R8" V 10175 7750 50  0000 C CNN
+F 1 "10k" V 10175 7625 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 10275 7625 50  0001 C CNN
+F 3 "~" H 10275 7625 50  0001 C CNN
+	1    10275 7625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 614AEC83
+P 10125 7800
+F 0 "C11" H 10217 7846 50  0000 L CNN
+F 1 "10nF" H 10217 7755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 10125 7800 50  0001 C CNN
+F 3 "~" H 10125 7800 50  0001 C CNN
+	1    10125 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10125 7700 10125 7625
+Wire Wire Line
+	10125 7625 10050 7625
+Wire Wire Line
+	10175 7625 10125 7625
+Connection ~ 10125 7625
+Wire Wire Line
+	10375 7625 10500 7625
+$Comp
+L power:GND #PWR018
+U 1 1 614AEC8E
+P 10125 7975
+F 0 "#PWR018" H 10125 7725 50  0001 C CNN
+F 1 "GND" H 10130 7802 50  0000 C CNN
+F 2 "" H 10125 7975 50  0001 C CNN
+F 3 "" H 10125 7975 50  0001 C CNN
+	1    10125 7975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10125 7975 10125 7900
+Wire Wire Line
+	10050 7425 10125 7425
+$Comp
+L power:GND #PWR017
+U 1 1 614AEC96
+P 10125 7425
+F 0 "#PWR017" H 10125 7175 50  0001 C CNN
+F 1 "GND" V 10130 7297 50  0000 R CNN
+F 2 "" H 10125 7425 50  0001 C CNN
+F 3 "" H 10125 7425 50  0001 C CNN
+	1    10125 7425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9450 7525 9250 7525
+$Comp
+L power:GND #PWR012
+U 1 1 614AEC9D
+P 9250 7525
+F 0 "#PWR012" H 9250 7275 50  0001 C CNN
+F 1 "GND" V 9255 7397 50  0000 R CNN
+F 2 "" H 9250 7525 50  0001 C CNN
+F 3 "" H 9250 7525 50  0001 C CNN
+	1    9250 7525
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 614AECA3
+P 9200 7425
+F 0 "R5" V 9100 7300 50  0000 C CNN
+F 1 "10k" V 9095 7425 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 9200 7425 50  0001 C CNN
+F 3 "~" H 9200 7425 50  0001 C CNN
+	1    9200 7425
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 614AECA9
+P 9200 7625
+F 0 "R6" V 9300 7375 50  0000 C CNN
+F 1 "10k" V 9300 7600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 9200 7625 50  0001 C CNN
+F 3 "~" H 9200 7625 50  0001 C CNN
+	1    9200 7625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 614AECAF
+P 9375 7225
+F 0 "C9" H 9200 7300 50  0000 L CNN
+F 1 "10nF" H 9450 7300 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9375 7225 50  0001 C CNN
+F 3 "~" H 9375 7225 50  0001 C CNN
+	1    9375 7225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 614AECB5
+P 9375 7800
+F 0 "C10" H 9475 7825 50  0000 L CNN
+F 1 "10nF" H 9475 7725 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9375 7800 50  0001 C CNN
+F 3 "~" H 9375 7800 50  0001 C CNN
+	1    9375 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 7625 9375 7625
+Wire Wire Line
+	9375 7700 9375 7625
+Connection ~ 9375 7625
+Wire Wire Line
+	9375 7625 9450 7625
+Wire Wire Line
+	9100 7625 8825 7625
+Wire Wire Line
+	9450 7425 9375 7425
+Wire Wire Line
+	9375 7425 9375 7325
+Wire Wire Line
+	9300 7425 9375 7425
+Connection ~ 9375 7425
+Wire Wire Line
+	9100 7425 8825 7425
+$Comp
+L power:GND #PWR014
+U 1 1 614AECC5
+P 9375 7950
+F 0 "#PWR014" H 9375 7700 50  0001 C CNN
+F 1 "GND" H 9380 7777 50  0000 C CNN
+F 2 "" H 9375 7950 50  0001 C CNN
+F 3 "" H 9375 7950 50  0001 C CNN
+	1    9375 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 614AECCB
+P 9375 7050
+F 0 "#PWR013" H 9375 6800 50  0001 C CNN
+F 1 "GND" H 9380 6877 50  0000 C CNN
+F 2 "" H 9375 7050 50  0001 C CNN
+F 3 "" H 9375 7050 50  0001 C CNN
+	1    9375 7050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9375 7125 9375 7050
+Wire Wire Line
+	9375 7900 9375 7950
+Text GLabel 10500 7625 2    50   Output ~ 0
+SW_COM_ENC_MHZ
+Text GLabel 8825 7625 0    50   Output ~ 0
+B_COM_ENC_MHZ
+Text GLabel 8825 7425 0    50   Output ~ 0
+A_COM_ENC_MHZ
+Text GLabel 2475 4650 2    50   Output ~ 0
+DOUT
+Text GLabel 1475 4525 0    50   Input ~ 0
+DOUT_MAX1
+Text GLabel 10425 4550 2    50   Output ~ 0
+DOUT_MAX1
+NoConn ~ 10325 4325
+NoConn ~ 10325 4225
+Wire Wire Line
+	10375 3525 10900 3525
+Connection ~ 10375 3525
+Wire Wire Line
+	10375 1950 10375 3525
+Wire Wire Line
+	11675 1950 10375 1950
+Wire Wire Line
+	11675 3525 11675 1950
+Wire Wire Line
+	12075 3525 11675 3525
+Wire Wire Line
+	11725 3425 11725 2000
+Wire Wire Line
+	12075 3425 11725 3425
+Wire Wire Line
+	10450 2000 10450 3425
+Wire Wire Line
+	11775 2050 11775 3325
+Wire Wire Line
+	11775 3325 12075 3325
+Wire Wire Line
+	10525 2050 11775 2050
+Wire Wire Line
+	11825 3225 12075 3225
+Wire Wire Line
+	10600 2100 11825 2100
+Wire Wire Line
+	11825 3225 11825 2100
+Wire Wire Line
+	11875 3125 12075 3125
+Wire Wire Line
+	10675 2175 11875 2175
+Wire Wire Line
+	11875 3125 11875 2175
+Wire Wire Line
+	11925 3025 12075 3025
+Wire Wire Line
+	10750 2250 11925 2250
+Wire Wire Line
+	11925 3025 11925 2250
+Wire Wire Line
+	11975 2925 12075 2925
+Wire Wire Line
+	10825 2325 11975 2325
+Wire Wire Line
+	11975 2925 11975 2325
+Wire Wire Line
+	12025 2825 12075 2825
+Wire Wire Line
+	10875 2400 12025 2400
+Wire Wire Line
+	12025 2825 12025 2400
+$Comp
+L Display_Character:CC56-12EWA U7
+U 1 1 61466421
+P 13175 3125
+F 0 "U7" H 13175 3792 50  0000 C CNN
+F 1 "3641-AS NAV/COM_STB" H 13175 3701 50  0000 C CNN
+F 2 "Cesna_Radio_Stack:3641-AS" H 13175 2525 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 12745 3155 50  0001 C CNN
+	1    13175 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11500 3425 11500 3475
+Wire Wire Line
+	10900 3425 10450 3425
+Wire Wire Line
+	10900 3225 10600 3225
+Wire Wire Line
+	10900 3025 10750 3025
+Wire Wire Line
+	10450 3425 10325 3425
+Connection ~ 10450 3425
+Wire Wire Line
+	10325 3525 10375 3525
+Wire Wire Line
+	10525 3325 10900 3325
+Connection ~ 10525 3325
+Wire Wire Line
+	10525 3325 10525 2050
+Wire Wire Line
+	10325 3325 10525 3325
+Wire Wire Line
+	10600 3225 10325 3225
+Connection ~ 10600 3225
+Wire Wire Line
+	10600 3225 10600 2100
+Wire Wire Line
+	10675 3125 10900 3125
+Connection ~ 10675 3125
+Wire Wire Line
+	10675 3125 10675 2175
+Wire Wire Line
+	10750 3025 10325 3025
+Connection ~ 10750 3025
+Wire Wire Line
+	10750 3025 10750 2250
+Wire Wire Line
+	10825 2925 10900 2925
+Connection ~ 10825 2925
+Wire Wire Line
+	10325 2925 10825 2925
+Wire Wire Line
+	10825 2925 10825 2325
+Wire Wire Line
+	10875 2825 10900 2825
+Connection ~ 10875 2825
+Wire Wire Line
+	10325 2825 10875 2825
+Wire Wire Line
+	10875 2825 10875 2400
+Wire Wire Line
+	10325 3125 10675 3125
+$Comp
+L power:GND #PWR016
+U 1 1 614C5A90
+P 9925 4675
+F 0 "#PWR016" H 9925 4425 50  0001 C CNN
+F 1 "GND" H 9930 4502 50  0000 C CNN
+F 2 "" H 9925 4675 50  0001 C CNN
+F 3 "" H 9925 4675 50  0001 C CNN
+	1    9925 4675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9925 4625 9925 4675
+Wire Wire Line
+	9925 2525 9925 2625
+Connection ~ 9925 2525
+Wire Wire Line
+	9075 2525 9075 2825
+Wire Wire Line
+	9925 2525 9075 2525
+Wire Wire Line
+	9925 2500 9925 2525
+$Comp
+L power:+5V #PWR015
+U 1 1 614C044A
+P 9925 2500
+F 0 "#PWR015" H 9925 2350 50  0001 C CNN
+F 1 "+5V" H 9940 2673 50  0000 C CNN
+F 2 "" H 9925 2500 50  0001 C CNN
+F 3 "" H 9925 2500 50  0001 C CNN
+	1    9925 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 3150 9075 3150
+Connection ~ 8850 3150
+$Comp
+L power:GND #PWR011
+U 1 1 614BEEA8
+P 8850 3150
+F 0 "#PWR011" H 8850 2900 50  0001 C CNN
+F 1 "GND" H 8855 2977 50  0000 C CNN
+F 2 "" H 8850 3150 50  0001 C CNN
+F 3 "" H 8850 3150 50  0001 C CNN
+	1    8850 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9075 3150 9075 3050
+Wire Wire Line
+	8650 3150 8850 3150
+Wire Wire Line
+	8650 3050 8650 3150
+Wire Wire Line
+	8650 2825 9075 2825
+Wire Wire Line
+	8650 2825 8650 2850
+$Comp
+L Device:CP_Small C7
+U 1 1 614BB03A
+P 8650 2950
+F 0 "C7" H 8738 2996 50  0000 L CNN
+F 1 "22uF" H 8738 2905 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 8650 2950 50  0001 C CNN
+F 3 "~" H 8650 2950 50  0001 C CNN
+	1    8650 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 9075 2825
+Wire Wire Line
+	9075 2825 9075 2850
+Wire Wire Line
+	9250 2825 9075 2825
+Wire Wire Line
+	9525 2825 9450 2825
+$Comp
+L Device:R_Small R7
+U 1 1 614B4F3C
+P 9350 2825
+F 0 "R7" V 9154 2825 50  0000 C CNN
+F 1 "10k" V 9245 2825 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 9350 2825 50  0001 C CNN
+F 3 "~" H 9350 2825 50  0001 C CNN
+	1    9350 2825
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 614B417A
+P 9075 2950
+F 0 "C8" H 9167 2996 50  0000 L CNN
+F 1 "150nF" H 9167 2905 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9075 2950 50  0001 C CNN
+F 3 "~" H 9075 2950 50  0001 C CNN
+	1    9075 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9425 4425 9525 4425
+Wire Wire Line
+	9525 4325 9425 4325
+Wire Wire Line
+	9425 4225 9525 4225
+Text GLabel 9425 4425 0    50   Input ~ 0
+DIN
+Text GLabel 9425 4325 0    50   Input ~ 0
+CLK
+Text GLabel 9425 4225 0    50   Input ~ 0
+CS_MAX
+$Comp
+L Display_Character:HDSP-A153 U6
+U 1 1 61473419
+P 11200 3125
+F 0 "U6" H 11200 3792 50  0000 C CNN
+F 1 "LD-3161-AS NAV/COM_STB" H 11200 3701 50  0000 C CNN
+F 2 "Cesna_Radio_Stack:3161AS_7_Segmentos" H 11200 2575 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 10800 3675 50  0001 C CNN
+	1    11200 3125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_LED:MAX7219 U5
+U 1 1 61464734
+P 9925 3625
+F 0 "U5" H 10050 4675 50  0000 C CNN
+F 1 "MAX7219" H 10175 4575 50  0000 C CNN
+F 2 "Package_DIP:DIP-24_W7.62mm_LongPads" H 9875 3675 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf" H 9975 3475 50  0001 C CNN
+	1    9925 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12200 6800 11975 6800
+Wire Wire Line
+	11975 6800 11975 6750
+Wire Wire Line
+	12950 8200 12950 8250
+Wire Wire Line
+	12700 8200 12950 8200
+$Comp
+L power:GND #PWR020
+U 1 1 61908B80
+P 12950 8250
+F 0 "#PWR020" H 12950 8000 50  0001 C CNN
+F 1 "GND" H 12955 8077 50  0000 C CNN
+F 2 "" H 12950 8250 50  0001 C CNN
+F 3 "" H 12950 8250 50  0001 C CNN
+	1    12950 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR019
+U 1 1 6190949A
+P 11975 6750
+F 0 "#PWR019" H 11975 6600 50  0001 C CNN
+F 1 "+5V" H 11990 6923 50  0000 C CNN
+F 2 "" H 11975 6750 50  0001 C CNN
+F 3 "" H 11975 6750 50  0001 C CNN
+	1    11975 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12700 6800 12850 6800
+Wire Wire Line
+	12200 6900 12000 6900
+Wire Wire Line
+	12700 6900 12850 6900
+Text GLabel 12850 6800 2    50   Output ~ 0
+DIN
+Text GLabel 12000 6900 0    50   Output ~ 0
+CLK
+Text GLabel 12850 6900 2    50   Output ~ 0
+CS_MAX
+Wire Wire Line
+	12200 7000 12000 7000
+Wire Wire Line
+	12700 7000 12950 7000
+Text GLabel 12950 7000 2    50   Input ~ 0
+COM_SWAP
+Wire Wire Line
+	12200 7100 12000 7100
+Wire Wire Line
+	12200 7200 12000 7200
+Wire Wire Line
+	12700 7100 12950 7100
+Wire Wire Line
+	12200 7300 12000 7300
+Wire Wire Line
+	12700 7300 12950 7300
+Wire Wire Line
+	12700 7200 12950 7200
+Text GLabel 12000 7200 0    50   Input ~ 0
+SW_COM_ENC_KHZ
+Text GLabel 12000 7300 0    50   Input ~ 0
+B_COM_ENC_MHZ
+Text GLabel 12950 7200 2    50   Input ~ 0
+A_COM_ENC_MHZ
+Text GLabel 12950 7300 2    50   Input ~ 0
+SW_COM_ENC_MHZ
+NoConn ~ 12200 7500
+NoConn ~ 12200 7600
+NoConn ~ 12200 7700
+NoConn ~ 12200 7800
+NoConn ~ 12200 7900
+NoConn ~ 12700 7900
+NoConn ~ 12700 7800
+NoConn ~ 12700 7700
+NoConn ~ 12700 7600
+NoConn ~ 12700 7500
+NoConn ~ 12700 7400
+NoConn ~ 12200 8000
+NoConn ~ 12200 8100
+NoConn ~ 12200 8200
+NoConn ~ 12700 8100
+NoConn ~ 12700 8000
+Text GLabel 12000 7100 0    50   Input ~ 0
+A_COM_ENC_KHZ
+Text GLabel 12950 7100 2    50   Input ~ 0
+B_COM_ENC_KHZ
+NoConn ~ 12000 7000
+Text GLabel 12200 7400 0    50   Input ~ 0
+DOUT
+$Comp
+L Display_Character:HDSP-A153 U8
+U 1 1 615A78F3
+P 15400 3125
+F 0 "U8" H 15400 3792 50  0000 C CNN
+F 1 "LD-3161-AS NAV/COM_STB_KHZ" H 15400 3701 50  0000 C CNN
+F 2 "Cesna_Radio_Stack:3161AS_7_Segmentos" H 15400 2575 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 15000 3675 50  0001 C CNN
+	1    15400 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15100 2825 14975 2825
+Wire Wire Line
+	14975 2825 14975 2400
+Wire Wire Line
+	14975 2400 12025 2400
+Connection ~ 12025 2400
+Wire Wire Line
+	15100 2925 14925 2925
+Wire Wire Line
+	14925 2925 14925 2325
+Wire Wire Line
+	14925 2325 11975 2325
+Connection ~ 11975 2325
+Wire Wire Line
+	15100 3025 14875 3025
+Wire Wire Line
+	14875 3025 14875 2250
+Wire Wire Line
+	14875 2250 11925 2250
+Connection ~ 11925 2250
+Wire Wire Line
+	15100 3125 14825 3125
+Wire Wire Line
+	14825 3125 14825 2175
+Wire Wire Line
+	14825 2175 11875 2175
+Connection ~ 11875 2175
+Wire Wire Line
+	15100 3225 14775 3225
+Wire Wire Line
+	14775 3225 14775 2100
+Wire Wire Line
+	14775 2100 11825 2100
+Connection ~ 11825 2100
+Wire Wire Line
+	15100 3325 14700 3325
+Wire Wire Line
+	14700 3325 14700 2050
+Wire Wire Line
+	14700 2050 11775 2050
+Connection ~ 11775 2050
+Wire Wire Line
+	15100 3425 14650 3425
+Wire Wire Line
+	14650 3425 14650 2000
+Wire Wire Line
+	10450 2000 11725 2000
+Connection ~ 11725 2000
+Wire Wire Line
+	11725 2000 14650 2000
+Wire Wire Line
+	15125 3525 15100 3525
+Wire Wire Line
+	14600 3525 14600 1950
+Wire Wire Line
+	14600 1950 11675 1950
+Connection ~ 15100 3525
+Wire Wire Line
+	15100 3525 14600 3525
+Connection ~ 11675 1950
+Wire Wire Line
+	15700 3425 15700 3525
+Wire Wire Line
+	10950 3625 10950 3875
+Wire Wire Line
+	10950 3875 15700 3875
+Wire Wire Line
+	15700 3875 15700 3525
+Wire Wire Line
+	10325 3625 10950 3625
+Connection ~ 15700 3525
+Wire Wire Line
+	10325 3725 10875 3725
+Wire Wire Line
+	10875 3725 10875 3975
+Wire Wire Line
+	10875 3975 14275 3975
+Wire Wire Line
+	14275 3975 14275 3525
+Wire Wire Line
+	10325 3825 10775 3825
+Wire Wire Line
+	10775 3825 10775 4100
+Wire Wire Line
+	10775 4100 14350 4100
+Wire Wire Line
+	14350 4100 14350 3425
+Wire Wire Line
+	14350 3425 14275 3425
+Wire Wire Line
+	10325 3925 10700 3925
+Wire Wire Line
+	10700 3925 10700 4225
+Wire Wire Line
+	10700 4225 14450 4225
+Wire Wire Line
+	14450 4225 14450 3325
+Wire Wire Line
+	14450 3325 14275 3325
+Wire Wire Line
+	10325 4025 10625 4025
+Wire Wire Line
+	10625 4025 10625 4325
+Wire Wire Line
+	10625 4325 14550 4325
+Wire Wire Line
+	14550 4325 14550 3225
+Wire Wire Line
+	14550 3225 14275 3225
+Wire Wire Line
+	10325 4125 10550 4125
+Wire Wire Line
+	10550 4125 10550 4425
+Wire Wire Line
+	10550 4425 11600 4425
+Wire Wire Line
+	11600 4425 11600 3475
+Wire Wire Line
+	11600 3475 11500 3475
+Connection ~ 11500 3475
+Wire Wire Line
+	11500 3475 11500 3525
+Wire Wire Line
+	10325 4425 10375 4425
+Wire Wire Line
+	10375 4425 10375 4550
+Wire Wire Line
+	10375 4550 10425 4550
+NoConn ~ 2375 4425
+NoConn ~ 2375 4325
+Wire Wire Line
+	2425 3625 2950 3625
+Connection ~ 2425 3625
+Wire Wire Line
+	2425 2050 2425 3625
+Wire Wire Line
+	3725 2050 2425 2050
+Wire Wire Line
+	3725 3625 3725 2050
+Wire Wire Line
+	4125 3625 3725 3625
+Wire Wire Line
+	3775 3525 3775 2100
+Wire Wire Line
+	4125 3525 3775 3525
+Wire Wire Line
+	2500 2100 2500 3525
+Wire Wire Line
+	3825 2150 3825 3425
+Wire Wire Line
+	3825 3425 4125 3425
+Wire Wire Line
+	2575 2150 3825 2150
+Wire Wire Line
+	3875 3325 4125 3325
+Wire Wire Line
+	2650 2200 3875 2200
+Wire Wire Line
+	3875 3325 3875 2200
+Wire Wire Line
+	3925 3225 4125 3225
+Wire Wire Line
+	2725 2275 3925 2275
+Wire Wire Line
+	3925 3225 3925 2275
+Wire Wire Line
+	3975 3125 4125 3125
+Wire Wire Line
+	2800 2350 3975 2350
+Wire Wire Line
+	3975 3125 3975 2350
+Wire Wire Line
+	4025 3025 4125 3025
+Wire Wire Line
+	2875 2425 4025 2425
+Wire Wire Line
+	4025 3025 4025 2425
+Wire Wire Line
+	4075 2925 4125 2925
+Wire Wire Line
+	2925 2500 4075 2500
+Wire Wire Line
+	4075 2925 4075 2500
+$Comp
+L Display_Character:CC56-12EWA U3
+U 1 1 61739781
+P 5225 3225
+F 0 "U3" H 5225 3892 50  0000 C CNN
+F 1 "3641-AS NAV/COM_ACTV" H 5225 3801 50  0000 C CNN
+F 2 "Cesna_Radio_Stack:3641-AS" H 5225 2625 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 4795 3255 50  0001 C CNN
+	1    5225 3225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3525 3550 3575
+Wire Wire Line
+	2950 3525 2500 3525
+Wire Wire Line
+	2950 3325 2650 3325
+Wire Wire Line
+	2950 3125 2800 3125
+Wire Wire Line
+	2500 3525 2375 3525
+Connection ~ 2500 3525
+Wire Wire Line
+	2375 3625 2425 3625
+Wire Wire Line
+	2575 3425 2950 3425
+Connection ~ 2575 3425
+Wire Wire Line
+	2575 3425 2575 2150
+Wire Wire Line
+	2375 3425 2575 3425
+Wire Wire Line
+	2650 3325 2375 3325
+Connection ~ 2650 3325
+Wire Wire Line
+	2650 3325 2650 2200
+Wire Wire Line
+	2725 3225 2950 3225
+Connection ~ 2725 3225
+Wire Wire Line
+	2725 3225 2725 2275
+Wire Wire Line
+	2800 3125 2375 3125
+Connection ~ 2800 3125
+Wire Wire Line
+	2800 3125 2800 2350
+Wire Wire Line
+	2875 3025 2950 3025
+Connection ~ 2875 3025
+Wire Wire Line
+	2375 3025 2875 3025
+Wire Wire Line
+	2875 3025 2875 2425
+Wire Wire Line
+	2925 2925 2950 2925
+Connection ~ 2925 2925
+Wire Wire Line
+	2375 2925 2925 2925
+Wire Wire Line
+	2925 2925 2925 2500
+Wire Wire Line
+	2375 3225 2725 3225
+$Comp
+L power:GND #PWR03
+U 1 1 617397A4
+P 1975 4775
+F 0 "#PWR03" H 1975 4525 50  0001 C CNN
+F 1 "GND" H 1980 4602 50  0000 C CNN
+F 2 "" H 1975 4775 50  0001 C CNN
+F 3 "" H 1975 4775 50  0001 C CNN
+	1    1975 4775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1975 4725 1975 4775
+Wire Wire Line
+	1975 2625 1975 2725
+Connection ~ 1975 2625
+Wire Wire Line
+	1125 2625 1125 2925
+Wire Wire Line
+	1975 2625 1125 2625
+Wire Wire Line
+	1975 2600 1975 2625
+$Comp
+L power:+5V #PWR02
+U 1 1 617397B0
+P 1975 2600
+F 0 "#PWR02" H 1975 2450 50  0001 C CNN
+F 1 "+5V" H 1990 2773 50  0000 C CNN
+F 2 "" H 1975 2600 50  0001 C CNN
+F 3 "" H 1975 2600 50  0001 C CNN
+	1    1975 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  3250 1125 3250
+Connection ~ 900  3250
+$Comp
+L power:GND #PWR01
+U 1 1 617397B8
+P 900 3250
+F 0 "#PWR01" H 900 3000 50  0001 C CNN
+F 1 "GND" H 905 3077 50  0000 C CNN
+F 2 "" H 900 3250 50  0001 C CNN
+F 3 "" H 900 3250 50  0001 C CNN
+	1    900  3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1125 3250 1125 3150
+Wire Wire Line
+	700  3250 900  3250
+Wire Wire Line
+	700  3150 700  3250
+Wire Wire Line
+	700  2925 1125 2925
+Wire Wire Line
+	700  2925 700  2950
+$Comp
+L Device:CP_Small C1
+U 1 1 617397C3
+P 700 3050
+F 0 "C1" H 788 3096 50  0000 L CNN
+F 1 "22uF" H 788 3005 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 700 3050 50  0001 C CNN
+F 3 "~" H 700 3050 50  0001 C CNN
+	1    700  3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1125 2925
+Wire Wire Line
+	1125 2925 1125 2950
+Wire Wire Line
+	1300 2925 1125 2925
+Wire Wire Line
+	1575 2925 1500 2925
+$Comp
+L Device:R_Small R1
+U 1 1 617397CD
+P 1400 2925
+F 0 "R1" V 1204 2925 50  0000 C CNN
+F 1 "10k" V 1295 2925 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 1400 2925 50  0001 C CNN
+F 3 "~" H 1400 2925 50  0001 C CNN
+	1    1400 2925
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 617397D3
+P 1125 3050
+F 0 "C2" H 1217 3096 50  0000 L CNN
+F 1 "150nF" H 1217 3005 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 1125 3050 50  0001 C CNN
+F 3 "~" H 1125 3050 50  0001 C CNN
+	1    1125 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1475 4525 1575 4525
+Wire Wire Line
+	1575 4425 1475 4425
+Wire Wire Line
+	1475 4325 1575 4325
+Text GLabel 1475 4425 0    50   Input ~ 0
+CLK
+Text GLabel 1475 4325 0    50   Input ~ 0
+CS_MAX
+$Comp
+L Display_Character:HDSP-A153 U2
+U 1 1 617397DF
+P 3250 3225
+F 0 "U2" H 3250 3892 50  0000 C CNN
+F 1 "LD-3161-AS NAV/COM_ACTV" H 3250 3801 50  0000 C CNN
+F 2 "Cesna_Radio_Stack:3161AS_7_Segmentos" H 3250 2675 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 2850 3775 50  0001 C CNN
+	1    3250 3225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_LED:MAX7219 U1
+U 1 1 617397E5
+P 1975 3725
+F 0 "U1" H 2100 4775 50  0000 C CNN
+F 1 "MAX7219" H 2225 4675 50  0000 C CNN
+F 2 "Package_DIP:DIP-24_W7.62mm_LongPads" H 1925 3775 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf" H 2025 3575 50  0001 C CNN
+	1    1975 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:HDSP-A153 U4
+U 1 1 617397EB
+P 7450 3225
+F 0 "U4" H 7450 3892 50  0000 C CNN
+F 1 "LD-3161-AS NAV/COM_ACTV_KHZ" H 7450 3801 50  0000 C CNN
+F 2 "Cesna_Radio_Stack:3161AS_7_Segmentos" H 7450 2675 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 7050 3775 50  0001 C CNN
+	1    7450 3225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2925 7025 2925
+Wire Wire Line
+	7025 2925 7025 2500
+Wire Wire Line
+	7025 2500 4075 2500
+Connection ~ 4075 2500
+Wire Wire Line
+	7150 3025 6975 3025
+Wire Wire Line
+	6975 3025 6975 2425
+Wire Wire Line
+	6975 2425 4025 2425
+Connection ~ 4025 2425
+Wire Wire Line
+	7150 3125 6925 3125
+Wire Wire Line
+	6925 3125 6925 2350
+Wire Wire Line
+	6925 2350 3975 2350
+Connection ~ 3975 2350
+Wire Wire Line
+	7150 3225 6875 3225
+Wire Wire Line
+	6875 3225 6875 2275
+Wire Wire Line
+	6875 2275 3925 2275
+Connection ~ 3925 2275
+Wire Wire Line
+	7150 3325 6825 3325
+Wire Wire Line
+	6825 3325 6825 2200
+Wire Wire Line
+	6825 2200 3875 2200
+Connection ~ 3875 2200
+Wire Wire Line
+	7150 3425 6750 3425
+Wire Wire Line
+	6750 3425 6750 2150
+Wire Wire Line
+	6750 2150 3825 2150
+Connection ~ 3825 2150
+Wire Wire Line
+	7150 3525 6700 3525
+Wire Wire Line
+	6700 3525 6700 2100
+Wire Wire Line
+	2500 2100 3775 2100
+Connection ~ 3775 2100
+Wire Wire Line
+	3775 2100 6700 2100
+Wire Wire Line
+	7175 3625 7150 3625
+Wire Wire Line
+	6650 3625 6650 2050
+Wire Wire Line
+	6650 2050 3725 2050
+Connection ~ 7150 3625
+Wire Wire Line
+	7150 3625 6650 3625
+Connection ~ 3725 2050
+Wire Wire Line
+	7750 3525 7750 3625
+Wire Wire Line
+	3000 3725 3000 3975
+Wire Wire Line
+	3000 3975 7750 3975
+Wire Wire Line
+	7750 3975 7750 3625
+Wire Wire Line
+	2375 3725 3000 3725
+Connection ~ 7750 3625
+Wire Wire Line
+	2375 3825 2925 3825
+Wire Wire Line
+	2925 3825 2925 4075
+Wire Wire Line
+	2925 4075 6325 4075
+Wire Wire Line
+	6325 4075 6325 3625
+Wire Wire Line
+	2375 3925 2825 3925
+Wire Wire Line
+	2825 3925 2825 4200
+Wire Wire Line
+	2825 4200 6400 4200
+Wire Wire Line
+	6400 4200 6400 3525
+Wire Wire Line
+	6400 3525 6325 3525
+Wire Wire Line
+	2375 4025 2750 4025
+Wire Wire Line
+	2750 4025 2750 4325
+Wire Wire Line
+	2750 4325 6500 4325
+Wire Wire Line
+	6500 4325 6500 3425
+Wire Wire Line
+	6500 3425 6325 3425
+Wire Wire Line
+	2375 4125 2675 4125
+Wire Wire Line
+	2675 4125 2675 4425
+Wire Wire Line
+	2675 4425 6600 4425
+Wire Wire Line
+	6600 4425 6600 3325
+Wire Wire Line
+	6600 3325 6325 3325
+Wire Wire Line
+	2375 4225 2600 4225
+Wire Wire Line
+	2600 4225 2600 4525
+Wire Wire Line
+	2600 4525 3650 4525
+Wire Wire Line
+	3650 4525 3650 3575
+Wire Wire Line
+	3650 3575 3550 3575
+Connection ~ 3550 3575
+Wire Wire Line
+	3550 3575 3550 3625
+Wire Wire Line
+	2375 4525 2425 4525
+Wire Wire Line
+	2425 4525 2425 4650
+Wire Wire Line
+	2425 4650 2475 4650
+NoConn ~ 3200 7500
+NoConn ~ 3200 7900
+$EndSCHEMATC
