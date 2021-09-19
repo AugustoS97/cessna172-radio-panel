@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name mega2560)(type Legacy)(uri ${KIPRJMOD}/libreries/mega2560.lib)(options "")(descr ""))
+  (lib (name Master-cache)(type Legacy)(uri ${KIPRJMOD}/libreries/Master-cache.lib)(options "")(descr ""))
+)

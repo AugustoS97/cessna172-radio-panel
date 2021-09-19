@@ -1,0 +1,5 @@
+"Ref","Qnty","Value","Cmp name","Footprint","Description","Vendor"
+"J1, ","1","COM_CONN","Conn_02x15_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Horizontal","Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",""
+"J2, ","1","NAV_CONN","Conn_02x15_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Horizontal","Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",""
+"J3, ","1","Power_Conn","Conn_01x04","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",""
+"MCU1, ","1","Mega_Embebido","Master_Arduino_Mega_Embebido_Arduino_Mega_v3","Mega2560-pro-mini-radio:MEGA_Embebido","",""

@@ -1,0 +1,480 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Conexión de los módulos COM/NAV al Mega 2560 pro mini"
+Date "2021-09-19"
+Rev "1.0"
+Comp "Augusto Samuel Hernández Martín"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Master-cache:Master_Arduino_Mega_Embebido_Arduino_Mega_v3 MCU1
+U 1 1 6147C87B
+P 3425 4775
+F 0 "MCU1" H 3450 7990 50  0000 C CNN
+F 1 "Mega_Embebido" H 3450 7899 50  0000 C CNN
+F 2 "Mega2560-pro-mini-radio:MEGA_Embebido" V 4525 5975 50  0001 C CNN
+F 3 "" V 4525 5975 50  0001 C CNN
+	1    3425 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x15_Odd_Even J1
+U 1 1 61480365
+P 6950 3000
+F 0 "J1" H 7000 3917 50  0000 C CNN
+F 1 "COM_CONN" H 7000 3826 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Horizontal" H 6950 3000 50  0001 C CNN
+F 3 "~" H 6950 3000 50  0001 C CNN
+	1    6950 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 614812AC
+P 6500 2225
+F 0 "#PWR04" H 6500 2075 50  0001 C CNN
+F 1 "+5V" H 6515 2398 50  0000 C CNN
+F 2 "" H 6500 2225 50  0001 C CNN
+F 3 "" H 6500 2225 50  0001 C CNN
+	1    6500 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 614819C4
+P 7450 3700
+F 0 "#PWR010" H 7450 3450 50  0001 C CNN
+F 1 "GND" H 7455 3527 50  0000 C CNN
+F 2 "" H 7450 3700 50  0001 C CNN
+F 3 "" H 7450 3700 50  0001 C CNN
+	1    7450 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3700 7450 3700
+Wire Wire Line
+	6750 2300 6500 2300
+Wire Wire Line
+	6500 2300 6500 2225
+Wire Wire Line
+	7250 2300 7500 2300
+Wire Wire Line
+	7250 2400 7500 2400
+Wire Wire Line
+	6750 2400 6500 2400
+Wire Wire Line
+	7250 2500 7500 2500
+Wire Wire Line
+	6750 2600 6500 2600
+Wire Wire Line
+	7250 2600 7500 2600
+Wire Wire Line
+	6750 2700 6500 2700
+Wire Wire Line
+	6750 2800 6500 2800
+Wire Wire Line
+	6750 2900 6500 2900
+Wire Wire Line
+	7250 2800 7525 2800
+Wire Wire Line
+	7250 2700 7500 2700
+Text GLabel 7500 2300 2    50   Input ~ 0
+DIN
+Text GLabel 6500 2400 0    50   Input ~ 0
+CLK
+Text GLabel 7500 2400 2    50   Input ~ 0
+CS_MAX
+Text GLabel 7500 2600 2    50   Output ~ 0
+B_COM_ENC_KHZ
+Text GLabel 7500 2700 2    50   Output ~ 0
+A_COM_ENC_MHZ
+Text GLabel 7500 2500 2    50   Output ~ 0
+COM_SWAP
+Text GLabel 7525 2800 2    50   Output ~ 0
+SW_COM_ENC_MHZ
+Text GLabel 6500 2900 0    50   Output ~ 0
+DOUT
+Text GLabel 6500 2800 0    50   Output ~ 0
+B_COM_ENC_MHZ
+Text GLabel 6500 2700 0    50   Output ~ 0
+SW_COM_ENC_KHZ
+Text GLabel 6500 2600 0    50   Output ~ 0
+A_COM_ENC_KHZ
+NoConn ~ 6750 2500
+Text GLabel 2725 5675 0    50   Output ~ 0
+CLK
+Text GLabel 2725 5475 0    50   Output ~ 0
+DIN
+Wire Wire Line
+	2775 5475 2725 5475
+Wire Wire Line
+	2775 5675 2725 5675
+Text GLabel 2725 5575 0    50   Output ~ 0
+CS_MAX
+Wire Wire Line
+	2775 5575 2725 5575
+Text GLabel 2725 4775 0    50   Input ~ 0
+COM_SWAP
+Wire Wire Line
+	2775 4775 2725 4775
+Text GLabel 2725 4875 0    50   Input ~ 0
+SW_COM_ENC_KHZ
+Text GLabel 2725 4975 0    50   Input ~ 0
+SW_COM_ENC_MHZ
+Wire Wire Line
+	2775 4875 2725 4875
+Wire Wire Line
+	2775 4975 2725 4975
+Text GLabel 2700 3975 0    50   Input ~ 0
+A_COM_ENC_KHZ
+Text GLabel 2700 4275 0    50   Input ~ 0
+B_COM_ENC_MHZ
+Text GLabel 2700 4075 0    50   Input ~ 0
+B_COM_ENC_KHZ
+Text GLabel 2700 4175 0    50   Input ~ 0
+A_COM_ENC_MHZ
+Wire Wire Line
+	2700 3975 2775 3975
+Wire Wire Line
+	2775 4075 2700 4075
+Wire Wire Line
+	2700 4175 2775 4175
+Wire Wire Line
+	2775 4275 2700 4275
+Wire Wire Line
+	2775 2075 2650 2075
+Wire Wire Line
+	2650 2075 2650 2125
+Wire Wire Line
+	2650 2175 2775 2175
+Wire Wire Line
+	2650 2125 2550 2125
+Connection ~ 2650 2125
+Wire Wire Line
+	2650 2125 2650 2175
+$Comp
+L power:GND #PWR02
+U 1 1 6148E6D2
+P 2550 2125
+F 0 "#PWR02" H 2550 1875 50  0001 C CNN
+F 1 "GND" H 2555 1952 50  0000 C CNN
+F 2 "" H 2550 2125 50  0001 C CNN
+F 3 "" H 2550 2125 50  0001 C CNN
+	1    2550 2125
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2775 2375 2675 2375
+Wire Wire Line
+	2675 2375 2675 2275
+Wire Wire Line
+	2675 2275 2775 2275
+Connection ~ 2675 2275
+$Comp
+L power:+5V #PWR01
+U 1 1 61490F32
+P 2200 2275
+F 0 "#PWR01" H 2200 2125 50  0001 C CNN
+F 1 "+5V" H 2215 2448 50  0000 C CNN
+F 2 "" H 2200 2275 50  0001 C CNN
+F 3 "" H 2200 2275 50  0001 C CNN
+	1    2200 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2275 2675 2275
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 6149548D
+P 7075 1400
+F 0 "J3" H 7155 1392 50  0000 L CNN
+F 1 "Power_Conn" H 7155 1301 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7075 1400 50  0001 C CNN
+F 3 "~" H 7075 1400 50  0001 C CNN
+	1    7075 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 61496328
+P 6825 1600
+F 0 "#PWR09" H 6825 1350 50  0001 C CNN
+F 1 "GND" H 6830 1427 50  0000 C CNN
+F 2 "" H 6825 1600 50  0001 C CNN
+F 3 "" H 6825 1600 50  0001 C CNN
+	1    6825 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 6149669A
+P 6750 1400
+F 0 "#PWR07" H 6750 1150 50  0001 C CNN
+F 1 "GND" V 6755 1272 50  0000 R CNN
+F 2 "" H 6750 1400 50  0001 C CNN
+F 3 "" H 6750 1400 50  0001 C CNN
+	1    6750 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 614969A1
+P 6750 1300
+F 0 "#PWR06" H 6750 1150 50  0001 C CNN
+F 1 "+5V" H 6765 1473 50  0000 C CNN
+F 2 "" H 6750 1300 50  0001 C CNN
+F 3 "" H 6750 1300 50  0001 C CNN
+	1    6750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR08
+U 1 1 61496D96
+P 6750 1500
+F 0 "#PWR08" H 6750 1350 50  0001 C CNN
+F 1 "VCC" V 6765 1627 50  0000 L CNN
+F 2 "" H 6750 1500 50  0001 C CNN
+F 3 "" H 6750 1500 50  0001 C CNN
+	1    6750 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6825 1600 6875 1600
+Wire Wire Line
+	6875 1500 6750 1500
+Wire Wire Line
+	6875 1400 6750 1400
+Wire Wire Line
+	6875 1300 6750 1300
+NoConn ~ 7250 2900
+NoConn ~ 6750 3000
+NoConn ~ 6750 3100
+NoConn ~ 7250 3000
+NoConn ~ 7250 3100
+NoConn ~ 7250 3200
+NoConn ~ 6750 3200
+NoConn ~ 6750 3300
+NoConn ~ 6750 3400
+NoConn ~ 7250 3400
+NoConn ~ 7250 3300
+NoConn ~ 6750 3500
+NoConn ~ 6750 3600
+NoConn ~ 7250 3600
+NoConn ~ 7250 3500
+NoConn ~ 6750 3700
+$Comp
+L Connector_Generic:Conn_02x15_Odd_Even J2
+U 1 1 614ADD1A
+P 6950 5150
+F 0 "J2" H 7000 6067 50  0000 C CNN
+F 1 "NAV_CONN" H 7000 5976 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Horizontal" H 6950 5150 50  0001 C CNN
+F 3 "~" H 6950 5150 50  0001 C CNN
+	1    6950 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 614ADD20
+P 6500 4375
+F 0 "#PWR05" H 6500 4225 50  0001 C CNN
+F 1 "+5V" H 6515 4548 50  0000 C CNN
+F 2 "" H 6500 4375 50  0001 C CNN
+F 3 "" H 6500 4375 50  0001 C CNN
+	1    6500 4375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 614ADD26
+P 7450 5850
+F 0 "#PWR011" H 7450 5600 50  0001 C CNN
+F 1 "GND" H 7455 5677 50  0000 C CNN
+F 2 "" H 7450 5850 50  0001 C CNN
+F 3 "" H 7450 5850 50  0001 C CNN
+	1    7450 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 5850 7450 5850
+Wire Wire Line
+	6750 4450 6500 4450
+Wire Wire Line
+	6500 4450 6500 4375
+Wire Wire Line
+	7250 4450 7500 4450
+Wire Wire Line
+	7250 4550 7500 4550
+Wire Wire Line
+	6750 4550 6500 4550
+Wire Wire Line
+	7250 4650 7500 4650
+Wire Wire Line
+	6750 4750 6500 4750
+Wire Wire Line
+	7250 4750 7500 4750
+Wire Wire Line
+	6750 4850 6500 4850
+Wire Wire Line
+	6750 4950 6500 4950
+Wire Wire Line
+	7250 4950 7525 4950
+Wire Wire Line
+	7250 4850 7500 4850
+Text GLabel 6500 4550 0    50   Input ~ 0
+CLK
+Text GLabel 7500 4550 2    50   Input ~ 0
+CS_MAX
+Text GLabel 7500 4750 2    50   Output ~ 0
+B_NAV_ENC_KHZ
+Text GLabel 7500 4850 2    50   Output ~ 0
+A_NAV_ENC_MHZ
+Text GLabel 7500 4650 2    50   Output ~ 0
+NAV_SWAP
+Text GLabel 7525 4950 2    50   Output ~ 0
+SW_NAV_ENC_MHZ
+Text GLabel 7500 4450 2    50   Input ~ 0
+DOUT
+Text GLabel 6500 4950 0    50   Output ~ 0
+B_NAV_ENC_MHZ
+Text GLabel 6500 4850 0    50   Output ~ 0
+SW_NAV_ENC_KHZ
+Text GLabel 6500 4750 0    50   Output ~ 0
+A_NAV_ENC_KHZ
+NoConn ~ 6750 4650
+NoConn ~ 7250 5050
+NoConn ~ 6750 5150
+NoConn ~ 6750 5250
+NoConn ~ 7250 5150
+NoConn ~ 7250 5250
+NoConn ~ 7250 5350
+NoConn ~ 6750 5350
+NoConn ~ 6750 5450
+NoConn ~ 6750 5550
+NoConn ~ 7250 5550
+NoConn ~ 7250 5450
+NoConn ~ 6750 5650
+NoConn ~ 6750 5750
+NoConn ~ 7250 5750
+NoConn ~ 7250 5650
+NoConn ~ 6750 5850
+Text GLabel 2725 5175 0    50   Input ~ 0
+NAV_SWAP
+Wire Wire Line
+	2775 5175 2725 5175
+Text GLabel 2725 5275 0    50   Input ~ 0
+SW_NAV_ENC_KHZ
+Text GLabel 2725 5375 0    50   Input ~ 0
+SW_NAV_ENC_MHZ
+Wire Wire Line
+	2775 5275 2725 5275
+Wire Wire Line
+	2775 5375 2725 5375
+Text GLabel 2700 4375 0    50   Input ~ 0
+A_NAV_ENC_KHZ
+Text GLabel 2700 4675 0    50   Input ~ 0
+B_NAV_ENC_MHZ
+Text GLabel 2700 4475 0    50   Input ~ 0
+B_NAV_ENC_KHZ
+Text GLabel 2700 4575 0    50   Input ~ 0
+A_NAV_ENC_MHZ
+Wire Wire Line
+	2700 4375 2775 4375
+Wire Wire Line
+	2775 4475 2700 4475
+Wire Wire Line
+	2700 4575 2775 4575
+Wire Wire Line
+	2775 4675 2700 4675
+NoConn ~ 2775 2475
+NoConn ~ 2775 2575
+NoConn ~ 2775 2675
+NoConn ~ 2775 2775
+NoConn ~ 2775 2875
+NoConn ~ 2775 2975
+NoConn ~ 2775 3075
+NoConn ~ 2775 3175
+NoConn ~ 2775 3275
+NoConn ~ 2775 3375
+NoConn ~ 2775 3475
+NoConn ~ 2775 3575
+NoConn ~ 2775 3675
+NoConn ~ 2775 3775
+NoConn ~ 2775 3875
+NoConn ~ 2775 5075
+NoConn ~ 2775 5775
+NoConn ~ 3225 5975
+NoConn ~ 3325 5975
+NoConn ~ 3475 5975
+NoConn ~ 3625 5975
+NoConn ~ 3725 5975
+NoConn ~ 3825 5975
+NoConn ~ 4125 5775
+NoConn ~ 4125 5675
+NoConn ~ 4125 5575
+NoConn ~ 4125 5475
+NoConn ~ 4125 5375
+NoConn ~ 4125 5275
+NoConn ~ 4125 5175
+NoConn ~ 4125 5075
+NoConn ~ 4125 4975
+NoConn ~ 4125 4875
+NoConn ~ 4125 4775
+NoConn ~ 4125 4675
+NoConn ~ 4125 4575
+NoConn ~ 4125 4475
+NoConn ~ 4125 4375
+NoConn ~ 4125 4275
+NoConn ~ 4125 4175
+NoConn ~ 4125 4075
+NoConn ~ 4125 3975
+NoConn ~ 4125 3875
+NoConn ~ 4125 3775
+NoConn ~ 4125 3675
+NoConn ~ 4125 3575
+NoConn ~ 4125 3475
+NoConn ~ 4125 3375
+NoConn ~ 4125 3275
+NoConn ~ 4125 3175
+NoConn ~ 4125 3075
+NoConn ~ 4125 2975
+NoConn ~ 4125 2875
+NoConn ~ 4125 2775
+NoConn ~ 4125 2675
+NoConn ~ 4125 2575
+NoConn ~ 4125 2475
+NoConn ~ 4125 2375
+NoConn ~ 4125 2275
+NoConn ~ 4125 2175
+NoConn ~ 4125 2075
+NoConn ~ 4125 1975
+NoConn ~ 4125 1875
+$Comp
+L power:VCC #PWR03
+U 1 1 61522FA9
+P 2575 1875
+F 0 "#PWR03" H 2575 1725 50  0001 C CNN
+F 1 "VCC" V 2590 2002 50  0000 L CNN
+F 2 "" H 2575 1875 50  0001 C CNN
+F 3 "" H 2575 1875 50  0001 C CNN
+	1    2575 1875
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2775 1875 2650 1875
+Wire Wire Line
+	2775 1975 2650 1975
+Wire Wire Line
+	2650 1975 2650 1875
+Wire Wire Line
+	2575 1875 2650 1875
+Connection ~ 2650 1875
+NoConn ~ 6750 5050
+$EndSCHEMATC
