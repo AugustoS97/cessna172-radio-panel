@@ -1,0 +1,80 @@
+
+(rules PCB Mega2560-pro-mini-radio
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 301)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 350.0)
+    (clear 200.2)
+    (clear 175.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 350.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND DOUT "SW_COM_ENC_MHZ" "B_COM_ENC_MHZ" "A_COM_ENC_MHZ" "SW_COM_ENC_KHZ" "B_COM_ENC_KHZ" "A_COM_ENC_KHZ"
+    "COM_SWAP" "CS_MAX" CLK DIN +5V "SW_NAV_ENC_MHZ" "B_NAV_ENC_MHZ" "A_NAV_ENC_MHZ"
+    "SW_NAV_ENC_KHZ" "B_NAV_ENC_KHZ" "A_NAV_ENC_KHZ" "NAV_SWAP" VCC "I_led" "M_led" "O_led"
+    AUX ADF DME MKR NAV2 NAV1 BOTH COM2
+    COM1
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 350.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
