@@ -8,6 +8,7 @@ Radio panel for COM or NAV for a Cessna 172 to use with MSFS2020, XPlane and Pre
 This folder contents the PCB design for the radio module. The design is the same for COM and NAV, it only changes on the frame. This PCB needs to be connected to the Arduino Mega using the Mega-pro-mini module designed in this repository. There is a GERBER folder to send the design to JLCPCB (www.jlcpcb.com) or you can ask me to buy it finished (augustosamuelhdezmartin@gmail.com).
 
 ![Render PCB radio](https://github.com/AugustoS97/cessna172-radio-panel/blob/main/Cesna-Radio-Stack-pcb/3D%20Model/Cesna_Radio_Stack_lat.png)
+![Render PCB bottom](https://github.com/AugustoS97/cessna172-radio-panel/blob/main/Cesna-Radio-Stack-pcb/3D%20Model/Cesna_Radio_Stack_bottom.png)
 
 To make this PCB you need this components (you can find the list in cessna172-radio-panel/Cesna-Radio-Stack-pcb/Docs/Cesna_Radio_Stack.csv):
 - 4x Display 7 segments 0.36" 1 bit Common Cathode red (https://www.aliexpress.com/item/1005001852229452.html?spm=a2g0o.cart.0.0.44e13c00yVY6Ir&mp=1)
